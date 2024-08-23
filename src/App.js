@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import React, {useRef} from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    //refs and funcs for scrolling
+    const ServicesRef = useRef(null);
+    const ProjectsRef = useRef(null);
+    const AboutRef = useRef(null);
+    const ContactRef = useRef(null);
+
+    const scrollToServices = () => ServicesRef.current?.scrollIntoView({behavior: 'smooth'});
+    const scrollToProjects = () => ProjectsRef.current?.scrollIntoView({behavior: 'smooth'});
+    const scrollToAbout = () => AboutRef.current?.scrollIntoView({behavior: 'smooth'});
+    const scrollToContact = () => ContactRef.current?.scrollIntoView({behavior: 'smooth'});
+
+
+    return (
+        <div className="App">
+            <NavBar scrollToServices={scrollToServices} scrollToContact={scrollToContact} scrollToAbout={scrollToAbout}
+                    scrollToProjects={scrollToProjects}/>
+            <Hero/>
+            <Services ref={ServicesRef}/>
+        </div>
+    );
 }
 
 export default App;
