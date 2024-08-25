@@ -39,6 +39,7 @@
     width: 40vw;
     height: auto;
     opacity: 0.15;
+    pointer-events: none;
 }
 img {
     display: inline-block;
@@ -130,14 +131,7 @@ h2 {
     margin-bottom: 36px;
     font-weight: 400;
 }
-p {
-    margin-bottom: 25px;
-    color: rgba(36, 64, 48, 0.8);
-}
-p {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
+
 .list-title{
     font-family: 'Titillium Web', sans-serif;
     font-size: 32px;

@@ -1,6 +1,6 @@
 export default function NavBar({scrollToServices, scrollToProjects, scrollToAbout, scrollToContact}) {
     return (
-        <nav className="rounded-3xl bg-green-900 w-[80%] flex absolute top-4 left-0 right-0 mx-auto px-3.5 py-2 z-10">
+        <nav className="rounded-3xl bg-[#244030] w-[80%] flex fixed top-4 left-0 right-0 mx-auto px-3.5 py-2 z-10">
             <div className="w-full flex items-center justify-between">
                 <div className="flex items-center justify-center">
                     <img
@@ -10,15 +10,15 @@ export default function NavBar({scrollToServices, scrollToProjects, scrollToAbou
                 </div>
                 <div className="flex items-center justify-center">
                     <div className="flex justify-start items-center">
-                        <NavLink text="ABOUT US" id="about" scrollToElement={scrollToAbout}/>
-                        <NavLink text="SERVICES" id="services" scrollToElement={scrollToServices}/>
-                        <NavLink text="PROJECTS" id="projects" scrollToElement={scrollToProjects}/>
+                        <NavLink text="O NAS" id="about" scrollToElement={scrollToAbout}/>
+                        <NavLink text="USŁUGI" id="services" scrollToElement={scrollToServices}/>
+                        <NavLink text="PROJEKTY" id="projects" scrollToElement={scrollToProjects}/>
                         <button
                             onClick={scrollToContact}
-                            className="text-white font-semibold mx-5 bg-[#e0a423] rounded-xl px-3 py-3
+                            className="text-white font-semibold mx-5 bg-[#e0a423] rounded-xl px-7 py-3
                             hover:text-black hover:bg-white hover:transition-colors duration-300"
                             style={{letterSpacing: '0.1em'}}>
-                            CONTACT
+                            KONTAKT
                         </button>
                     </div>
                 </div>
